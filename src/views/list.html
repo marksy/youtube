@@ -1,0 +1,20 @@
+<section class="list" ng-class="{'viewing-detail': vm.viewingDetail}">
+  <ul ng-class="{'hide-list': vm.hideList}">
+    <li ng-repeat="video in vm.videoList">
+      <div class="video-information">
+        <h2 ng-click="vm.viewDetail($index)" title="Watch the video: {{video.snippet.title}}">{{video.snippet.title}}</h2>
+        <h3>Published on <span class="date" rel="date">{{video.snippet.publishedAt | date : 'mediumDate'}}</span></h3>
+        <p class="description">{{video.snippet.description | limitTo: 160}}<span ng-if="video.snippet.description.length > 160">...</span></p>
+      </div>
+      <img
+        ng-src="{{video.snippet.thumbnails.maxres.url || video.snippet.thumbnails.standard.url || video.snippet.thumbnails.medium.url || video.snippet.thumbnails.default.url}}"
+        alt="{{video.snippet.title}}"
+        class="video-thumb"
+        ng-click="vm.viewDetail($index)" title="Watch the video: {{video.snippet.title}}">
+    </li>
+  </ul>
+</section>
+
+<div class="video-detail">
+  <ui-view ng-cloak></ui-view>
+</div>

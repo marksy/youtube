@@ -1,0 +1,9 @@
+.video-thumb {
+  width: 100%;
+  @include tablet {
+    margin-right: $spacer;
+    width: 50%;
+    max-height: 180px;
+    object-fit: cover;
+  }
+}

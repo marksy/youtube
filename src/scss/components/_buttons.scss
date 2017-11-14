@@ -1,0 +1,27 @@
+.btn {
+  background-color: lighten($grey,45);
+  border-radius: $radius;
+  border: 1px solid lighten($black,30);
+  color: $black;
+  @extend p;
+  padding: $spacer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.back-to-list {
+    margin-bottom: $spacer;
+  }
+  &.page {
+    &-prev {
+      text-transform: uppercase;
+    }
+    &-next {
+      text-transform: uppercase;
+    }
+  }
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+}

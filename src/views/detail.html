@@ -1,0 +1,15 @@
+<button class="btn back-to-list" ng-click="vm.close()"><i class="icon icon-home"></i>Back to list of videos</button>
+<section class="detail">
+	<h2>{{vm.video.title}}</h2>
+	<p><strong>{{vm.video.publishedAt | date : 'mediumDate'}}</strong></p>
+	<div class="row">
+		<div class="loading">
+			<iframe ng-src="{{vm.video.url}}" frameborder="0"></iframe>
+		</div>
+		<p>{{vm.video.description}}</p>
+	</div>
+</section>
+<div class="pagination">
+	<button class="btn page-prev" ng-click="vm.prev()" ng-disabled="!vm.showPrev"><i class="icon icon-prev"></i>prev</button>
+	<button class="btn page-next" ng-click="vm.next()" ng-disabled="!vm.showNext">next<i class="icon icon-next"></i></button>
+</div>

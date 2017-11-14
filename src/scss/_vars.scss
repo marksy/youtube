@@ -1,0 +1,28 @@
+// _vars.scss
+
+// colours
+$black: #000;
+$white: #fff;
+$grey: #666;
+
+$roman: #E6605F;
+$clayAsh: #BFC7AE;
+$moonstoneBlue: #70A4BD;
+$cloudBurst: #384051;
+$breakerBay: #59A3A5;
+
+$primaryColour: $cloudBurst;
+$secondaryColour: $moonstoneBlue;
+$linkColour: $roman;
+
+
+
+// config
+$speed: 333ms;
+$radius: 3px;
+$spacer: 10px;
+
+//breakpoints
+$phablet-width: 482px;
+$tablet-width: 768px;
+$desktop-width: 1024px;

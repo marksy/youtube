@@ -1,0 +1,50 @@
+.list {
+  //
+  ul {
+    padding: $spacer;
+  }
+  li {
+    border: 1px solid $grey;
+    border-radius: $radius;
+    padding: $spacer;
+    margin-bottom: $spacer;
+    transition: background-color $speed;
+    background-color: lighten($grey,55);
+    &:hover {
+      background-color: lighten($grey,50);
+      h2 {
+        color: $roman;
+      }
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .description {
+    display: none;
+    @include phablet {
+      display: block;
+    }
+  }
+
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  img {
+    opacity: 1;
+    transition: opacity $speed;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  h2,img {
+    cursor: pointer;
+  }
+
+}

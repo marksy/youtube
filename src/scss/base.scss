@@ -1,0 +1,52 @@
+// base.scss
+@import 'vars';
+@import 'mixins/responsive';
+
+@import 'reset';
+@import 'components/typography';
+@import 'components/header';
+@import 'components/thumb';
+@import 'components/buttons';
+@import 'components/pagination';
+@import 'components/icons';
+
+
+// pages
+@import 'layouts/list';
+@import 'layouts/detail';
+
+.wrapper {
+  position: relative;
+  max-width: 810px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.list {
+  opacity: 1;
+  transition: transform $speed, opacity $speed;
+}
+
+.hide-list {
+  display: none;
+}
+
+.viewing-detail {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.viewing-detail ~ .video-detail {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.video-detail {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform $speed, opacity $speed;
+}
