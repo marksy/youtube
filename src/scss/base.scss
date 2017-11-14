@@ -46,6 +46,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow: auto;
+  height: 100%;
+  padding-bottom: $spacer * 4;
   opacity: 0;
   transform: translateX(100%);
   transition: transform $speed, opacity $speed;
